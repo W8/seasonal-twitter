@@ -1,0 +1,23 @@
+{
+  "name": "seasonal-twitter",
+  "description": "Web app to schedule Twitter profiles",
+  "version": "0.1.0",
+  "private": true,
+  "author": "Thomas Wang",
+  "scripts": {
+    "minify-html": "html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true src/index.html > public/index.html",
+    "minify-css": "postcss src/main.css > public/main.css",
+    "minify-js": "babel-minify src/main.js -o public/main.js",
+    "build": "yarn minify-html && yarn minify-css && yarn minify-js",
+    "develop": "yarn build && firebase serve --only hosting",
+    "deploy": "yarn build && firebase deploy && git add . && git commit -m \"update and deploy\" && git push"
+  },
+  "repository": "https://github.com/thomaswang/seasonal-twitter",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "babel-minify": "^0.5.1",
+    "cssnano": "^4.1.10",
+    "html-minifier": "^4.0.0",
+    "postcss-cli": "^6.1.3"
+  }
+}

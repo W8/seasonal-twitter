@@ -1,0 +1,547 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300,400,700&display=swap");
+
+:root {
+  --box-shadow: rgba(50, 50, 93, 0.17);
+  --background: white;
+  --text-color: black;
+  --border-color: white;
+  --fill: #1da1f2;
+  --input-bg: white;
+}
+
+@media all and (prefers-color-scheme: dark) {
+  :root {
+    --box-shadow: rgba(0, 0, 0, 0.24);
+    --background: #17202a;
+    --text-color: white;
+    --border-color: black;
+    --fill: white;
+    --input-bg: #0f151b;
+  }
+
+  .details {
+    border: 1px solid #0f151b;
+  }
+}
+
+.grid-center {
+  display: grid !important;
+  place-items: center;
+}
+
+body {
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 3rem 1rem;
+  background: var(--background);
+  color: var(--text-color);
+}
+
+main {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: calc(20px + 26 * ((100vw - 320px) / 380));
+  }
+}
+@media screen and (min-width: 700px) {
+  h1 {
+    font-size: 46px;
+  }
+}
+
+#illo {
+  width: 25rem;
+  max-width: 100%;
+  margin-bottom: 2rem;
+}
+
+.description {
+  margin: 2rem auto;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 32rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.names {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+}
+
+#verified {
+  margin-left: 0.3rem;
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0.3rem;
+}
+
+.badge {
+  fill: var(--fill);
+}
+
+#photo {
+  width: 3rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+#display-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+#screen-name {
+  font-size: 16px;
+  font-weight: 400;
+  color: grey;
+  margin-left: 0;
+  margin-top: 0.3rem;
+}
+
+@media all and (max-width: 600px) {
+  .profile {
+    flex-direction: column;
+  }
+
+  #photo {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  #screen-name {
+    margin-top: 0.3rem;
+    margin-left: 0;
+  }
+}
+
+.account-block {
+  text-align: center;
+  margin: 2rem auto 0;
+}
+
+@media all and (max-width: 500px) {
+  .account-block {
+    text-align: left;
+  }
+}
+
+.status {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.account {
+  text-align: left;
+}
+
+#quickstart-sign-in-id {
+  font-family: "SFMono-Regular", monospace;
+}
+
+#account-type {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+    Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: var(--text-color);
+  font-weight: bold;
+}
+
+#error-message {
+  display: none;
+  margin-top: 2rem;
+  text-align: center;
+  color: red;
+}
+
+.status > span.label {
+  color: grey;
+}
+
+.upgrade-block {
+  margin-top: 2rem;
+  line-height: 1.5;
+}
+
+.upgrade-container {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  transform: scale(1.5);
+  opacity: 1;
+}
+
+#upgrade-amount {
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding-left: 1.5rem;
+}
+
+button.upgrade {
+  border-radius: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+button.upgrade-unlimited {
+  display: block;
+  margin: 0 auto;
+  background: linear-gradient(to bottom, #d4af37 0%, #c5a028 100%);
+}
+
+form {
+  margin: 1rem auto 0;
+}
+
+form > h2 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  .date-time-block {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.choose {
+  margin: 2rem 0 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+.disclaimer {
+  margin-top: 3rem;
+  font-weight: 300;
+  font-style: italic;
+  color: grey;
+}
+
+.details {
+  margin-top: 2rem;
+  padding: 3rem;
+  overflow: scroll;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0px 5px 35px 0px var(--box-shadow);
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  display: none;
+}
+
+.details:hover {
+  transform: translateY(-2px);
+}
+
+button:focus,
+input:focus,
+textarea:focus {
+  outline: #0070f3 solid 2px;
+}
+
+input {
+  padding: 0.3rem;
+}
+
+input[type="file"] {
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  width: 100%;
+}
+
+button {
+  display: block;
+  background: #1dcaff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  outline: inherit;
+}
+
+@media all and (max-width: 500px) {
+  button {
+    font-size: 14px;
+    padding: 1rem 1rem;
+  }
+}
+
+button.sign-in {
+  margin: 0 auto 4rem;
+}
+
+button.set {
+  display: block;
+  margin: 3rem auto 0;
+  background-image: linear-gradient(135deg, #5534ff 0%, #4654ff 100%);
+  cursor: not-allowed;
+}
+
+#set {
+  display: block;
+}
+
+select,
+input,
+textarea {
+  background: var(--input-bg);
+  color: var(--text-color);
+}
+
+select,
+input,
+textarea {
+  border: 1px solid grey;
+}
+
+select {
+  min-width: 4rem;
+  padding: 0.3rem;
+}
+
+option {
+  min-width: 4rem;
+}
+
+.slash {
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+}
+
+#name-input,
+#location-input,
+#website-input {
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 0.8rem;
+  color: var(--text-color);
+}
+
+#avatar,
+#cover {
+  border-width: 0;
+  padding-left: 0;
+  background: none;
+}
+
+textarea {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.image-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+section#scheduled-profiles {
+  display: none;
+}
+
+section#scheduled-profiles > h2 {
+  margin: 5rem auto 2rem;
+}
+
+.scheduled-profile {
+  display: block;
+  position: relative;
+  min-height: 8rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+}
+
+.card-cover {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+.card-avatar {
+  position: relative;
+  border: 0.25rem solid var(--background);
+  border-radius: 50%;
+  width: 20%;
+  margin-top: 5%;
+}
+
+.card-displayname {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.3125;
+  letter-spacing: 2pxem;
+}
+
+.card-username {
+  line-height: 1.3125;
+  color: rgb(136, 153, 166);
+}
+
+.card-bio {
+  margin-top: 0.5rem;
+  line-height: 1.3125;
+}
+
+.card-location,
+.card-website {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.card-dtblock {
+  position: absolute;
+  right: 1rem;
+  top: 45%;
+}
+
+.card-datetime {
+  font-family: "SFMono-Regular", monospace;
+  font-weight: bold;
+}
+
+.options {
+  margin-top: 1.5rem;
+  display: block;
+  text-align: center;
+  color: grey;
+}
+
+.slash {
+  margin: 0 1rem;
+}
+
+@media all and (max-width: 500px) {
+  .scheduled-profile {
+    padding: 1rem;
+  }
+
+  .card-dtblock {
+    position: relative;
+    margin-top: 1.5rem;
+    text-align: center;
+    top: auto;
+    right: auto;
+  }
+
+  .card-avatar {
+    margin-top: 20%;
+  }
+}
+
+a {
+  color: #4695da;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+a:hover {
+  opacity: 0.8;
+}
+
+a.delete,
+a.make-default {
+  color: grey;
+  text-decoration: none;
+}
+
+footer {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.8;
+}
+
+footer > div {
+  margin-top: 2rem;
+}
+
+#refresh {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 2rem;
+  color: var(--text-color);
+  fill: var(--text-color);
+}
+
+#refresh:hover {
+  color: grey;
+  fill: grey;
+}
+
+#refresh > svg {
+  margin-left: 0.5rem;
+  width: 1.5rem;
+}
+
+.loader,
+.loader:after {
+  border-radius: 50%;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.loader {
+  font-size: 0.2rem;
+  position: relative;
+  text-indent: -9999em;
+  border-top: 0.3rem solid rgba(255, 255, 255, 0.2);
+  border-right: 0.3rem solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.3rem solid rgba(255, 255, 255, 0.2);
+  border-left: 0.3rem solid #ffffff;
+  transform: translateZ(0);
+  animation: load8 0.8s infinite linear;
+}
+@keyframes load8 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
