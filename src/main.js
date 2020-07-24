@@ -929,4 +929,16 @@ document.getElementById("refresh").addEventListener("click", () => {
 
 window.onload = function () {
   initApp();
+
+  const phBadge = document.getElementById("ph-badge");
+
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    phBadge.src =
+      "https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=179003&theme=dark&period=daily";
+  } else {
+    phBadge.src =
+      "https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=179003&theme=light&period=daily";
+  }
+
+  phBadge.style.height = "54px";
 };
