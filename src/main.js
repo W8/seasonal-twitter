@@ -873,7 +873,7 @@ function initApp() {
       }
 
       // [START_EXCLUDE]
-      twitterPhoto.src = `https://unavatar.now.sh/${userData.username}?json`;
+      twitterPhoto.src = `https://unavatar.now.sh/${userData.username}`;
       twitterName.textContent = twitterUser.displayName;
       screenName.textContent = userData.username;
       signInStatus.textContent = "Yes";
