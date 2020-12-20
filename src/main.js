@@ -873,7 +873,7 @@ function initApp() {
       }
 
       // [START_EXCLUDE]
-      twitterPhoto.src = `https://unavatar.now.sh/${userData.username}`;
+      twitterPhoto.src = `https://api.microlink.io/?url=https://twitter.com/${userData.username}&embed=image.url`;
       twitterName.textContent = twitterUser.displayName;
       screenName.textContent = userData.username;
       signInStatus.textContent = "Yes";
